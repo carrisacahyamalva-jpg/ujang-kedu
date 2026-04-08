@@ -1,0 +1,23 @@
+h1 {
+    text-align: Right;
+    font-family:"Source Sans Pro", sans-serif;
+    font-weight: bold;
+    color:bisque;
+} ul {list-style-type:none;
+      border: 10px solid beige ;
+      background-color: white;
+      text-align:center;
+
+}
+  li {display:inline;
+      padding: 5px;
+      font-size: 17
+      font-family: Papyrus
+
+}
+
+p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    }
+body {background-color: skyblue}
