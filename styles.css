@@ -3,10 +3,10 @@ page {
     margin: 0;
     pading: 0;
 }
-font-face {
-        font-family: 'Jumping Chick';
-    src: url('fonts/Jumping Chick.otf') format ('opentype'),
-         url('fonts/Jumping Chick.ttf') format ('truetype');
+@font-face {
+        font-family: 'Jumping-Chick';
+    src: url('fonts/Jumping-Chick.otf') format ('opentype'),
+         url('fonts/Jumping-Chick.ttf') format ('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,7 +20,7 @@ body {
 
 h1 {
     text-align: center;
-    font-family: 'Jumping Chick', sans-serif;
+    font-family: 'Jumping-Chick', sans-serif;
     font-weight: bold;
     color: bisque;
     margin-top: 20px;
