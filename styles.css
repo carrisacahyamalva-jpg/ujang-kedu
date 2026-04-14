@@ -12,7 +12,7 @@ page {
 }
 
 body {
-    background-image: Project TIK kel 1 web.png;
+    background-image: url('Project TIK kel 1 web.png');
     margin: 0;
     padding: 20px;
     font-family: Jumping Chick, sans-serif;
@@ -79,4 +79,4 @@ p{
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
 }
-body {background-color: skyblue}
+
