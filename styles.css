@@ -49,7 +49,7 @@ ul {
     border-bottom: 10px solid beige; 
     background-color: white;
     
-    text-align: right;        
+    text-align: center;        
     padding: 15px 50px;   
     margin: 0px 0;
     margin-top: 0;
@@ -63,6 +63,9 @@ li {
     padding: 10px;
     font-size: 17px;
     font-family: Papyrus, serif;
+    color: white;
+    padding-left: 250;
+    padding-right: 250;
 }
 
 img {
