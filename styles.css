@@ -5,8 +5,8 @@ page {
 }
 @font-face {
         font-family: 'Jumping Chick';
-    src: url('fonts/Jumping Chick.woff2') format ('woff2'),
-         url('fonts/Jumping Chick.woff') format ('woff');
+    src: url('fonts/Jumping Chick.otf') format ('opentype'),
+         url('fonts/Jumping Chick.ttf') format ('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -15,7 +15,7 @@ body {
     background-color: skyblue;
     margin: 0;
     padding: 20px;
-    font-family: sans-serif;
+    font-family: Jumping Chick, sans-serif;
 }
 
 h1 {
