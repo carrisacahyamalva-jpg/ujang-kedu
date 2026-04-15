@@ -48,6 +48,8 @@ img {
 
 ul {
     background-color: #6f6261;
+    border-top: none;
+    border-bottom: none;
     display: flex;
     justify-content: center; 
     align-items: center;   
