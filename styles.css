@@ -49,26 +49,25 @@ ul {
     border-bottom: 10px solid beige;  
     background-color: white;
     
-    
+   
     display: flex;
-    justify-content: center;
-    align-items: center;     
+    justify-content: center; 
+    align-items: center;   
     
-    padding: 40;   
+    padding: 15px 0;   
     margin: 0;
     width: 100%;             
     box-sizing: border-box; 
 }
 
 li {
-   
-    padding: 0px;       
+    
+    padding: 0 40px;         
     font-size: 17px;
     font-family: Papyrus, serif;
-    color: #ca467c;          
+    color: #ca467c;         
     cursor: pointer;
 }
-
 img {
     display: block;
     margin: 20 20;
