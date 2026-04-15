@@ -36,12 +36,16 @@ h2 {
 
 
 img {
-    display: block;       
-    margin: 20px auto;    
-    max-width: 80%;       
+    display: block !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 80%;
     height: auto;
     border-radius: 8px;
 }
+
 ul {
     list-style-type: none;
     border-top: 10px solid beige;    
