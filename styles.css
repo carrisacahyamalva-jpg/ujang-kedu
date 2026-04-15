@@ -47,11 +47,7 @@ img {
 }
 
 ul {
-    list-style-type: none;
-     
     background-color: #6f6261;
-    
-   
     display: flex;
     justify-content: center; 
     align-items: center;   
