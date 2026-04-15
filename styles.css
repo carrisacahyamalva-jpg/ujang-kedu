@@ -67,11 +67,7 @@ li {
     color: #ca467c;         
     cursor: pointer;
 }
-img {
-    display: block;
-    margin: 20 20;
-    max-width: 80%;
-}
+
 
 .chango-regular {
   font-family: "Chango", sans-serif;
