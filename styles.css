@@ -54,7 +54,7 @@ ul {
     justify-content: center; 
     align-items: center;   
     
-    padding: 15px 15px;   
+    padding: 30px 30px;   
     margin: 0;
     width: 100%;             
     box-sizing: border-box; 
@@ -62,7 +62,7 @@ ul {
 
 li {
     
-    padding: 0 80px;         
+    padding: 0 100px;         
     font-size: 17px;
     font-family: Papyrus, serif;
     color: #ca467c;         
