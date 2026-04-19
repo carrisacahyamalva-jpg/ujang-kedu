@@ -19,17 +19,27 @@ body {
 }
 
 h1 {
+    
     display: block;
-    margin: 40px auto;
+    margin: 50px auto;
     width: fit-content;
-    font-family: "Chango", sans-serif;
-    color: #ca467c;
-    background-color: #f5f5dc;
-    padding: 100px 150px;            
-    border-radius: 10px;      
-    display: inline-block;   
-}
+    text-align: center;
 
+    
+    font-family: "Chango", sans-serif;
+    font-size: 80px;           
+    font-weight: bold;
+    color: #ca467c;
+
+    
+    background-color: #f5f5dc;
+    padding: 40px 80px;        
+    border-radius: 20px;        
+    
+    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    border: 5px solid #ca467c;  
+}
 
 h2 {
     text-align: center;
