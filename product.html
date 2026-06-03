@@ -29,40 +29,40 @@
     </head>
     <body>
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Gizi Sederhana</title>
-    
-    <!-- Memanggil CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="kalkulator">
-    <h2>Kalkulator Gizi (IMT)</h2>
-    
-    <label for="berat">Berat Badan (kg):</label>
-    <input type="number" id="berat" placeholder="Contoh: 55">
+    <div class="wrapper-center">
+        
+        <div class="kalkulator">
+            <h2>Kalkulator Gizi (IMT)</h2>
+            
+            <label for="berat">Berat Badan (kg):</label>
+            <input type="number" id="berat" placeholder="Contoh: 55">
 
-    <label for="tinggi">Tinggi Badan (cm):</label>
-    <input type="number" id="tinggi" placeholder="Contoh: 165">
+            <label for="tinggi">Tinggi Badan (cm):</label>
+            <input type="number" id="tinggi" placeholder="Contoh: 165">
 
-    <button onclick="hitungGizi()">Hitung Status</button>
+            <button onclick="hitungGizi()">Hitung Status</button>
 
-    <div id="hasil"></div>
-</div>
+            <div id="hasil"></div>
+        </div>
 
-<!-- JavaScript tetap digabung di dalam HTML -->
+    </div>
+
 <script>
 function hitungGizi() {
     var berat = parseFloat(document.getElementById("berat").value);
     var tinggiCm = parseFloat(document.getElementById("tinggi").value);
     var hasilDiv = document.getElementById("hasil");
 
-    // Validasi input kosong
     if (!berat || !tinggiCm) {
         hasilDiv.innerHTML = "Harap isi semua data dengan benar!";
         hasilDiv.style.color = "red";
@@ -74,26 +74,25 @@ function hitungGizi() {
     var status = "";
     var warna = "";
 
-    // Logika penentuan status gizi
     if (imt < 18.5) {
         status = "Kekurangan Berat Badan (Gizi Kurang)";
-        warna = "#ff9800"; // Oranye
+        warna = "#ff9800";
     } else if (imt >= 18.5 && imt <= 25.0) {
         status = "Normal (Ideal)";
-        warna = "#4CAF50"; // Hijau
+        warna = "#4CAF50";
     } else if (imt > 25.0 && imt <= 27.0) {
         status = "Kelebihan Berat Badan (Tingkat Ringan)";
-        warna = "#ff9800"; // Oranye
+        warna = "#ff9800";
     } else {
         status = "Obesitas (Gizi Lebih)";
-        warna = "#f44336"; // Merah
+        warna = "#f44336";
     }
 
-    // Menampilkan hasil dengan warna teks yang sesuai
     hasilDiv.style.color = warna;
     hasilDiv.innerHTML = "Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status;
 }
 </script>
+
 
 
         
