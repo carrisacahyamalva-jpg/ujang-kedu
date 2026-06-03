@@ -53,6 +53,42 @@
              
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
+
+     <script>
+
+function hitungGizi() {
+    
+    var berat = parseFloat(document.getElementById("berat").value);
+    var tinggiCm = parseFloat(document.getElementById("tinggi").value);
+
+ 
+    if (!berat || !tinggiCm) {
+        document.getElementById("hasil").innerHTML = "Harap isi semua data!";
+        return;
+    }
+
+
+    var tinggiM = tinggiCm / 100;
+
+   
+    var imt = berat / (tinggiM * tinggiM);
+    var status = "";
+
+    
+    if (imt < 18.5) {
+        status = "Kekurangan Berat Badan (Gizi Kurang)";
+    } else if (imt >= 18.5 && imt <= 25.0) {
+        status = "Normal (Ideal)";
+    } else if (imt > 25.0 && imt <= 27.0) {
+        status = "Kelebihan Berat Badan (Tingkat Ringan)";
+    } else {
+        status = "Obesitas (Gizi Lebih)";
+    }
+
+   
+    document.getElementById("hasil").innerHTML = "Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status;
+}
+</script>
         
     </body>
 
