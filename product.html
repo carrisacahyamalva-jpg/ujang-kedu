@@ -6,26 +6,24 @@
     </head>
     <body>
 
-        <h1>Say hi to Carrisa's Space</h1>
-        <ul>
-            <li><a href= "home.html">HOME</a></li>
-            <li><a href= "design.html">DESIGN</a></li>
-            <li>product</li>
-        </ul>
+    <div class="kalkulator-gizi">
+    <h3>Kalkulator Status Gizi (IMT)</h3>
+    <div class="input-group">
+        <label for="berat">Berat Badan (kg):</label>
+        <input type="number" id="berat" placeholder="Contoh: 55">
+    </div>
+    <div class="input-group">
+        <label for="tinggi">Tinggi Badan (cm):</label>
+        <input type="number" id="tinggi" placeholder="Contoh: 160">
+    </div>
+    <button onclick="hitungGizi()">Hitung Sekarang</button>
 
- <h2>GERAKAN SILAT</h2>
-
-   
- 
-    <img src="ujang-silat.gif" alt= ujang-silat.gif width= 250 ">
-    <br>
-
-        <p>ini adalah contoh silat
-
-
-            
-                
-                
+    <div id="hasil-box" class="hasil-container" style="display: none;">
+        <h4>Hasil Analisis:</h4>
+        <p id="skor-imt">Skor IMT: -</p>
+        <p id="status-gizi">Status: -</p>
+    </div>
+</div>
                 
         
 
