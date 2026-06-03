@@ -29,52 +29,45 @@
     </head>
     <body>
 
-    <div class="kalkulator-gizi">
-    <h3>Kalkulator Status Gizi (IMT)</h3>
-    <div class="input-group">
-        <label for="berat">Berat Badan (kg):</label>
-        <input type="number" id="berat" placeholder="Contoh: 55">
-    </div>
-    <div class="input-group">
-        <label for="tinggi">Tinggi Badan (cm):</label>
-        <input type="number" id="tinggi" placeholder="Contoh: 160">
-    </div>
-    <button onclick="hitungGizi()">Hitung Sekarang</button>
-
-    <div id="hasil-box" class="hasil-container" style="display: none;">
-        <h4>Hasil Analisis:</h4>
-        <p id="skor-imt">Skor IMT: -</p>
-        <p id="status-gizi">Status: -</p>
-    </div>
-</div>
-                
-        
-
-             
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
-
-     <script>
-
-function hitungGizi() {
+   <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Gizi Sederhana</title>
     
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+<div class="kalkulator">
+    <h2>Kalkulator Gizi (IMT)</h2>
+    <label>Berat Badan (kg):</label>
+    <input type="number" id="berat" placeholder="Contoh: 55">
+
+    <label>Tinggi Badan (cm):</label>
+    <input type="number" id="tinggi" placeholder="Contoh: 165">
+
+    <button onclick="hitungGizi()">Hitung Status</button>
+
+    <div id="hasil"></div>
+</div>
+
+<script>
+function hitungGizi() {
     var berat = parseFloat(document.getElementById("berat").value);
     var tinggiCm = parseFloat(document.getElementById("tinggi").value);
 
- 
     if (!berat || !tinggiCm) {
         document.getElementById("hasil").innerHTML = "Harap isi semua data!";
         return;
     }
 
-
     var tinggiM = tinggiCm / 100;
-
-   
     var imt = berat / (tinggiM * tinggiM);
     var status = "";
 
-    
     if (imt < 18.5) {
         status = "Kekurangan Berat Badan (Gizi Kurang)";
     } else if (imt >= 18.5 && imt <= 25.0) {
@@ -85,10 +78,12 @@ function hitungGizi() {
         status = "Obesitas (Gizi Lebih)";
     }
 
-   
     document.getElementById("hasil").innerHTML = "Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status;
 }
 </script>
+
+</body>
+</html>
         
     </body>
 
