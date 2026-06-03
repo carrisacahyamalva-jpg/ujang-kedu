@@ -214,37 +214,40 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #f4f4f9;
+    /* Mengubah warna background seluruh halaman menjadi krem lembut */
+    background-color: #faf6ee; 
     font-family: Arial, sans-serif;
 }
 
-/* Ini boks ajaib yang memaksa semuanya ke tengah */
+/* Kotak ajaib yang memaksa semuanya ke tengah */
 .wrapper-center {
     display: flex;
-    justify-content: center; /* Tengah secara Horizontal (Kanan-Kiri) */
-    align-items: center;     /* Tengah secara Vertikal (Atas-Bawah) */
+    justify-content: center; /* Tengah secara Horizontal */
+    align-items: center;     /* Tengah secara Vertikal */
     width: 100%;
-    min-height: 100vh;       /* Mengikuti tinggi penuh layar monitor/HP */
+    min-height: 100vh;       
     box-sizing: border-box;
     padding: 20px;
 }
 
-/* Desain Kotak Kalkulator */
+/* Desain Kotak Kalkulator - DIUBAH MENJADI PERSEGI PANJANG */
 .kalkulator {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     width: 100%;
-    max-width: 340px; /* Batas lebar maksimal boks */
+    /* Lebar maksimal ditambah agar bentuknya menjadi persegi panjang yang proporsional */
+    max-width: 500px; 
     box-sizing: border-box;
 }
 
 .kalkulator h2 {
     text-align: center;
     margin-top: 0;
+    margin-bottom: 25px;
     color: #333;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 label {
@@ -257,22 +260,23 @@ label {
 input {
     width: 100%;
     padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     box-sizing: border-box;
     font-size: 16px;
+    background-color: #fff;
 }
 
 button {
     width: 100%;
-    padding: 12px;
-    margin-top: 15px;
+    padding: 14px;
+    margin-top: 20px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
@@ -284,11 +288,11 @@ button:hover {
 }
 
 #hasil {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    margin-top: 25px;
+    padding: 12px;
+    border-radius: 6px;
     font-weight: bold;
     text-align: center;
-    line-height: 1.5;
-    font-size: 16px;
+    line-height: 1.6;
+    font-size: 17px;
 }
