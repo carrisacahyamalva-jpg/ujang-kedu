@@ -267,7 +267,43 @@ p{
     margin-top: 0;
     color: #f5f5dc;
 }
-
+/* Isi dari file style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding-top: 50px;
+}
+.kalkulator {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    height: fit-content;
+}
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+#hasil {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
 p {
     background-color: transparent !important;
     color: white !important;
