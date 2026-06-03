@@ -156,7 +156,7 @@ p{
     grid-template-columns: repeat(2, 1fr);
     gap: 40px; 
     padding: 80px 10%; 
-    background-color:#ca467c;
+    background-color: transparent; /* Diubah dari #fff jadi transparent */
 }
 
 .cc1 h4 {
