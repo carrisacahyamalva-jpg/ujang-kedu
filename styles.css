@@ -1,4 +1,3 @@
-/* ==================== STRUCTURAL & FONTS ==================== */
 page {
     size: A4;
     margin: 0;
@@ -21,7 +20,6 @@ html, body {
 }
 
 body {
-    /* BACKGROUND UTAMA HALAMAN: Menggunakan Gambar Kelompok */
     background-image: url('Project TIK kel 1 web.png');
     background-size: cover;
     background-position: center;
@@ -30,7 +28,6 @@ body {
     font-family: 'Jumping Chick', Arial, sans-serif;
 }
 
-/* ==================== TYPOGRAPHY & ELEMENTS ==================== */
 h1 {
     display: block;
     margin: 50px auto;
@@ -97,7 +94,6 @@ img {
     border-radius: 8px;
 }
 
-/* ==================== NAVIGATION BAR ==================== */
 ul {
     background-color: #6f6261;
     display: flex;
@@ -107,11 +103,11 @@ ul {
     margin: 0;
     width: 100%;             
     box-sizing: border-box; 
-    list-style: none; /* Menghilangkan bullet point link */
+    list-style: none;
 }
 
 li {
-    padding: 0 50px; /* Diperkecil sedikit agar muat di layar hp */
+    padding: 0 50px; 
     font-size: 17px;
     font-family: Papyrus, serif;
 }
@@ -126,51 +122,49 @@ li a:hover {
     color: #f5f5dc;
 }
 
-/* ==================== KALKULATOR GIZI (DI HALAMAN PRODUCT) ==================== */
-.wrapper-center {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
+.wrapper-product {
     width: 100%;
-    padding: 60px 20px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
 .kalkulator {
-    /* KALKULATOR BERWARNA KREM SEPERTI BOX ATAS */
     background-color: #f5f5dc; 
     padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2); 
-    width: 100%;
-    /* BENTUK PERSEGI PANJANG */
-    max-width: 550px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    display: block;
+    margin: 50px auto; 
+    width: 90%;
+    max-width: 600px; 
     box-sizing: border-box;
-    font-family: Arial, sans-serif; /* Menggunakan font standar agar kalkulator terbaca jelas */
+    font-family: Arial, sans-serif; 
 }
 
-.kalkulator h3 {
+.kalkulator h2.judul-kalkulator {
     background-color: transparent;
     color: #ca467c;
     font-family: "Chango", sans-serif;
-    font-size: 26px;
+    font-size: 32px;
     padding: 0;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .kalkulator label {
     font-weight: bold;
     display: block;
-    margin-top: 15px;
+    margin-top: 20px;
     color: #333;
     text-align: left;
+    font-size: 16px;
 }
 
 .kalkulator input {
     width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    padding: 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     border: 2px solid #ca467c;
     border-radius: 8px;
     box-sizing: border-box;
@@ -181,14 +175,14 @@ li a:hover {
 .kalkulator button {
     width: 100%;
     padding: 14px;
-    margin-top: 25px;
+    margin-top: 30px;
     background-color: #ca467c;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     transition: background 0.2s;
 }
 
@@ -198,16 +192,15 @@ li a:hover {
 
 #hasil {
     margin-top: 25px;
-    padding: 12px;
-    border-radius: 6px;
+    padding: 15px;
+    border-radius: 8px;
     font-weight: bold;
     text-align: center;
     line-height: 1.6;
     font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.5); /* Background hasil transparan tipis */
+    background-color: rgba(255, 255, 255, 0.6); 
 }
 
-/* ==================== GRID TEAM MEMBERS (CC) ==================== */
 .cc {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -259,5 +252,15 @@ li a:hover {
 @media (max-width: 768px) {
     .cc {
         grid-template-columns: 1fr;
+    }
+    li {
+        padding: 0 20px; 
+    }
+    h1 {
+        font-size: 45px; 
+        padding: 20px 40px;
+    }
+    .kalkulator h2.judul-kalkulator {
+        font-size: 22px; 
     }
 }
