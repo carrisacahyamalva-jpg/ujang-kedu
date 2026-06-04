@@ -23,18 +23,6 @@
             <h2 class="judul-kalkulator">Kalkulator Gizi</h2>
             
             <label for="berat">Berat Badan (kg):</label>
-            <input type="number" id="berat" placeholder="0">
-
-            <label for="tinggi">Tinggi Badan (cm):</label>
-            <input type="number" id="tinggi" placeholder="0">
-
-            <button onclick="hitungGizi()">Hitung</button>
-        </div>
-
-     <div id="slide-input" class="kalkulator">
-            <h2 class="judul-kalkulator">Kalkulator Gizi</h2>
-            
-            <label for="berat">Berat Badan (kg):</label>
             <input type="number" id="berat" placeholder="Contoh: 55">
 
             <label for="tinggi">Tinggi Badan (cm):</label>
@@ -42,6 +30,10 @@
 
             <button onclick="hitungGizi()">Hitung</button>
         </div>
+
+        <div id="slide-hasil" class="kalkulator" style="display: none;">
+            <h2 class="judul-kalkulator">Hasil</h2>
+            
             <div id="konten-imt"></div>
             <div id="konten-makanan"></div>
             
