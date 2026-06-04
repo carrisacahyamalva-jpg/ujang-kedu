@@ -19,7 +19,7 @@
 
     <div class="wrapper-product">
         
-        <div class="kalkulator">
+        <div id="slide-input" class="kalkulator">
             <h2 class="judul-kalkulator">Kalkulator Gizi (IMT)</h2>
             
             <label for="berat">Berat Badan (kg):</label>
@@ -29,8 +29,15 @@
             <input type="number" id="tinggi" placeholder="Contoh: 165">
 
             <button onclick="hitungGizi()">Hitung Status</button>
+        </div>
 
-            <div id="hasil"></div>
+        <div id="slide-hasil" class="kalkulator" style="display: none;">
+            <h2 class="judul-kalkulator">Hasil Analisis Gizi</h2>
+            
+            <div id="konten-imt"></div>
+            <div id="konten-rekomendasi"></div>
+
+            <button onclick="kembaliKeKalkulator()" style="background-color: #6f6261; margin-top: 20px;">Ulangi Hitung</button>
         </div>
 
     </div>
@@ -39,11 +46,9 @@
     function hitungGizi() {
         var berat = parseFloat(document.getElementById("berat").value);
         var tinggiCm = parseFloat(document.getElementById("tinggi").value);
-        var hasilDiv = document.getElementById("hasil");
 
         if (!berat || !tinggiCm) {
-            hasilDiv.innerHTML = "Harap isi semua data dengan benar!";
-            hasilDiv.style.color = "red";
+            alert("Harap isi semua data dengan benar!");
             return;
         }
 
@@ -56,8 +61,7 @@
         if (imt < 18.5) {
             status = "Kekurangan Berat Badan (Gizi Kurang)";
             warna = "#ff9800";
-            rekomendasi = "<div style='text-align: left; margin-top: 15px; font-weight: normal; color: #333; font-size: 15px;'>" +
-                          "<strong>🥗 Rekomendasi Makanan:</strong>" +
+            rekomendasi = "<strong>🥗 Rekomendasi Makanan:</strong>" +
                           "<ul>" +
                           "<li>Konsumsi makanan padat nutrisi: telur, dada ayam, kacang-kacangan, alpukat, dan susu.</li>" +
                           "<li>Tambah frekuensi makan menjadi 5-6 kali sehari dalam porsi kecil namun sering.</li>" +
@@ -66,43 +70,37 @@
                           "<ul>" +
                           "<li>Fokus pada latihan beban (strength training) untuk membangun massa otot, bukan lemak.</li>" +
                           "<li>Batasi olahraga kardio berdurasi panjang seperti lari maraton.</li>" +
-                          "</ul>" +
-                          "</div>";
+                          "</ul>";
         } else if (imt >= 18.5 && imt <= 25.0) {
             status = "Normal (Ideal)";
             warna = "#4CAF50";
-            rekomendasi = "<div style='text-align: left; margin-top: 15px; font-weight: normal; color: #333; font-size: 15px;'>" +
-                          "<strong>🥗 Rekomendasi Makanan:</strong>" +
+            rekomendasi = "<strong>🥗 Rekomendasi Makanan:</strong>" +
                           "<ul>" +
-                          "<li>Pertahankan pola makan seimbang (gizi seimbang): karbohidrat kompleks, serat sayuran, buah, dan protein.</li>" +
+                          "<li>Pertahankan pola makan seimbang: karbohidrat kompleks, serat sayuran, buah, dan protein.</li>" +
                           "<li>Jaga hidrasi dengan minum air putih minimal 2 liter sehari.</li>" +
                           "</ul>" +
                           "<strong>🏋️ Rekomendasi Olahraga:</strong>" +
                           "<ul>" +
-                          "<li>Kombinasikan olahraga kardio (jogging, bersepeda, berenang) dengan latihan beban ringan.</li>" +
+                          "<li>Kombinasikan olahraga kardio (jogging, bersepeda) dengan latihan beban ringan.</li>" +
                           "<li>Lakukan secara rutin 3-5 kali seminggu selama 30-45 menit.</li>" +
-                          "</ul>" +
-                          "</div>";
+                          "</ul>";
         } else if (imt > 25.0 && imt <= 27.0) {
             status = "Kelebihan Berat Badan (Tingkat Ringan)";
             warna = "#ff9800";
-            rekomendasi = "<div style='text-align: left; margin-top: 15px; font-weight: normal; color: #333; font-size: 15px;'>" +
-                          "<strong>🥗 Rekomendasi Makanan:</strong>" +
+            rekomendasi = "<strong>🥗 Rekomendasi Makanan:</strong>" +
                           "<ul>" +
-                          "<li>Kurangi makanan manis, gorengan, dan karbohidrat olahan (junk food, tepung-tepungan).</li>" +
+                          "<li>Kurangi makanan manis, gorengan, dan karbohidrat olahan (tepung-tepungan).</li>" +
                           "<li>Perbanyak porsi sayur berlipat ganda dan ganti camilan dengan buah segar.</li>" +
                           "</ul>" +
                           "<strong>🏋️ Rekomendasi Olahraga:</strong>" +
                           "<ul>" +
                           "<li>Tingkatkan latihan kardio seperti jalan cepat, aerobik, atau bersepeda untuk membakar kalori.</li>" +
                           "<li>Mulai rutin melakukan squat atau plank untuk mengencangkan otot tubuh.</li>" +
-                          "</ul>" +
-                          "</div>";
+                          "</ul>";
         } else {
             status = "Obesitas (Gizi Lebih)";
             warna = "#f44336";
-            rekomendasi = "<div style='text-align: left; margin-top: 15px; font-weight: normal; color: #333; font-size: 15px;'>" +
-                          "<strong>🥗 Rekomendasi Makanan:</strong>" +
+            rekomendasi = "<strong>🥗 Rekomendasi Makanan:</strong>" +
                           "<ul>" +
                           "<li>Terapkan defisit kalori yang sehat (kontrol porsi makan dengan ketat).</li>" +
                           "<li>Hindari minuman kemasan berpemanis tinggi dan kurangi penggunaan garam berlebih.</li>" +
@@ -111,11 +109,26 @@
                           "<ul>" +
                           "<li>Pilih olahraga low-impact yang aman untuk sendi: jalan kaki santai, berenang, atau bersepeda statis.</li>" +
                           "<li>Mulai dari durasi ringan (15-20 menit) lalu tingkatkan secara bertahap seiring kebugaran membaik.</li>" +
-                          "</ul>" +
-                          "</div>";
+                          "</ul>";
         }
 
-        hasilDiv.innerHTML = "<span style='color: " + warna + ";'>Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status + "</span>" + rekomendasi;
+        // Cetak hasil ke elemen slide kedua
+        document.getElementById("konten-imt").innerHTML = "<div style='text-align: center; font-size: 20px; font-weight: bold; margin-bottom: 20px; color: " + warna + ";'>Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status + "</div>";
+        document.getElementById("konten-rekomendasi").innerHTML = "<div style='text-align: left; font-weight: normal; color: #333; font-size: 15px;'>" + rekomendasi + "</div>";
+
+        // LEMPAR TAMPILAN (Sembunyikan input, Munculkan hasil)
+        document.getElementById("slide-input").style.display = "none";
+        document.getElementById("slide-hasil").style.display = "block";
+    }
+
+    function kembaliKeKalkulator() {
+        // Reset input nilai di form
+        document.getElementById("berat").value = "";
+        document.getElementById("tinggi").value = "";
+
+        // LEMPAR BALIK TAMPILAN (Sembunyikan hasil, Munculkan input lagi)
+        document.getElementById("slide-hasil").style.display = "none";
+        document.getElementById("slide-input").style.display = "block";
     }
     </script>
 
