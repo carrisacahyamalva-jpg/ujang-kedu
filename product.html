@@ -1,43 +1,23 @@
- <title>Blank template</title>
-
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="styles.css">
-
-    <link rel="stylesheet" href="styles.css"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
-     <head>
-
- 
-
-      
-      <body>
-
- 
-     
-
-        <ul>
-            <li><a href= "home.html">HOME</a></li>
-            <li><a href= "design.html">DESIGN</a></li>
-            <li><a href= "product.html">PRODUCT</a></li>
-        </ul>
-
-        <h1>GoWeby</h1>
-                    
-                
-    </head>
-    <body>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Gizi Sederhana</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GoWeby - Product (Kalkulator Gizi)</title>
+
+    <link rel="stylesheet" href="styles.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Redressed&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="design.html">DESIGN</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+    </ul>
 
     <div class="wrapper-center">
         
@@ -57,45 +37,41 @@
 
     </div>
 
-<script>
-function hitungGizi() {
-    var berat = parseFloat(document.getElementById("berat").value);
-    var tinggiCm = parseFloat(document.getElementById("tinggi").value);
-    var hasilDiv = document.getElementById("hasil");
+    <script>
+    function hitungGizi() {
+        var berat = parseFloat(document.getElementById("berat").value);
+        var tinggiCm = parseFloat(document.getElementById("tinggi").value);
+        var hasilDiv = document.getElementById("hasil");
 
-    if (!berat || !tinggiCm) {
-        hasilDiv.innerHTML = "Harap isi semua data dengan benar!";
-        hasilDiv.style.color = "red";
-        return;
+        if (!berat || !tinggiCm) {
+            hasilDiv.innerHTML = "Harap isi semua data dengan benar!";
+            hasilDiv.style.color = "red";
+            return;
+        }
+
+        var tinggiM = tinggiCm / 100;
+        var imt = berat / (tinggiM * tinggiM);
+        var status = "";
+        var warna = "";
+
+        if (imt < 18.5) {
+            status = "Kekurangan Berat Badan (Gizi Kurang)";
+            warna = "#ff9800";
+        } else if (imt >= 18.5 && imt <= 25.0) {
+            status = "Normal (Ideal)";
+            warna = "#4CAF50";
+        } else if (imt > 25.0 && imt <= 27.0) {
+            status = "Kelebihan Berat Badan (Tingkat Ringan)";
+            warna = "#ff9800";
+        } else {
+            status = "Obesitas (Gizi Lebih)";
+            warna = "#f44336";
+        }
+
+        hasilDiv.style.color = warna;
+        hasilDiv.innerHTML = "Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status;
     }
+    </script>
 
-    var tinggiM = tinggiCm / 100;
-    var imt = berat / (tinggiM * tinggiM);
-    var status = "";
-    var warna = "";
-
-    if (imt < 18.5) {
-        status = "Kekurangan Berat Badan (Gizi Kurang)";
-        warna = "#ff9800";
-    } else if (imt >= 18.5 && imt <= 25.0) {
-        status = "Normal (Ideal)";
-        warna = "#4CAF50";
-    } else if (imt > 25.0 && imt <= 27.0) {
-        status = "Kelebihan Berat Badan (Tingkat Ringan)";
-        warna = "#ff9800";
-    } else {
-        status = "Obesitas (Gizi Lebih)";
-        warna = "#f44336";
-    }
-
-    hasilDiv.style.color = warna;
-    hasilDiv.innerHTML = "Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status;
-}
-</script>
-
-
-
-        
-    </body>
-
+</body>
 </html>
