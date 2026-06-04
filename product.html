@@ -116,3 +116,61 @@
                       "<li>Minum air putih 2 liter sehari</li>" +
                       "</ul>";
             olahragaTeks = "<strong>Rekomendasi Olahraga:</strong>" +
+                           "<ul>" +
+                           "<li>Kardio (jogging, sepeda) & beban ringan</li>" +
+                           "<li>Rutin 3-5 kali seminggu</li>" +
+                           "</ul>";
+        } else {
+            if (imt > 25.0 && imt <= 27.0) {
+                status = "Kelebihan Berat Badan";
+                warna = "#ff9800";
+            } else {
+                status = "Obesitas";
+                warna = "#f44336";
+            }
+            
+            makanan = "<strong>Rekomendasi Makanan:</strong>" +
+                      "<ul>" +
+                      "<li>Kurangi makanan manis, gorengan, tepung</li>" +
+                      "<li>Perbanyak sayuran dan protein tanpa lemak</li>" +
+                      "</ul>";
+            
+            containerOpsi.style.display = "block"; 
+            olahragaTeks = "";
+        }
+
+        document.getElementById("konten-imt").innerHTML = "<div style='text-align: center; font-size: 20px; font-weight: bold; margin-bottom: 20px; color: " + warna + ";'>IMT: " + imt.toFixed(1) + "<br>" + status + "</div>";
+        document.getElementById("konten-makanan").innerHTML = "<div class='box-saran'>" + makanan + "</div>";
+        
+        if(imt > 25.0) {
+            document.getElementById("konten-olahraga").innerHTML = "<div class='box-saran' id='box-olahraga-dinamis' style='display:none;'></div>";
+        } else {
+            document.getElementById("konten-olahraga").innerHTML = "<div class='box-saran' id='box-olahraga-dinamis'>" + olahragaTeks + "</div>";
+        }
+
+        document.getElementById("slide-input").style.display = "none";
+        document.getElementById("slide-hasil").style.display = "block";
+    }
+
+    function pilihOlahraga(kategori) {
+        var box = document.getElementById("box-olahraga-dinamis");
+        box.style.display = "block";
+        box.innerHTML = databaseOlahraga[kategori];
+        
+        var tombols = document.getElementsByClassName("btn-opsi");
+        for (var i = 0; i < tombols.length; i++) {
+            tombols[i].classList.remove("tombol-aktif");
+        }
+        event.currentTarget.classList.add("tombol-aktif");
+    }
+
+    function kembaliKeKalkulator() {
+        document.getElementById("berat").value = "";
+        document.getElementById("tinggi").value = "";
+        document.getElementById("slide-hasil").style.display = "none";
+        document.getElementById("slide-input").style.display = "block";
+    }
+    </script>
+
+</body>
+</html>
