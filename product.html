@@ -51,23 +51,71 @@
         var imt = berat / (tinggiM * tinggiM);
         var status = "";
         var warna = "";
+        var rekomendasi = "";
 
         if (imt < 18.5) {
             status = "Kekurangan Berat Badan (Gizi Kurang)";
             warna = "#ff9800";
+            rekomendasi = "<div style='text-align: left; margin-top: 15px; font-weight: normal; color: #333; font-size: 15px;'>" +
+                          "<strong>🥗 Rekomendasi Makanan:</strong>" +
+                          "<ul>" +
+                          "<li>Konsumsi makanan padat nutrisi: telur, dada ayam, kacang-kacangan, alpukat, dan susu.</li>" +
+                          "<li>Tambah frekuensi makan menjadi 5-6 kali sehari dalam porsi kecil namun sering.</li>" +
+                          "</ul>" +
+                          "<strong>🏋️ Rekomendasi Olahraga:</strong>" +
+                          "<ul>" +
+                          "<li>Fokus pada latihan beban (strength training) untuk membangun massa otot, bukan lemak.</li>" +
+                          "<li>Batasi olahraga kardio berdurasi panjang seperti lari maraton.</li>" +
+                          "</ul>" +
+                          "</div>";
         } else if (imt >= 18.5 && imt <= 25.0) {
             status = "Normal (Ideal)";
             warna = "#4CAF50";
+            rekomendasi = "<div style='text-align: left; margin-top: 15px; font-weight: normal; color: #333; font-size: 15px;'>" +
+                          "<strong>🥗 Rekomendasi Makanan:</strong>" +
+                          "<ul>" +
+                          "<li>Pertahankan pola makan seimbang (gizi seimbang): karbohidrat kompleks, serat sayuran, buah, dan protein.</li>" +
+                          "<li>Jaga hidrasi dengan minum air putih minimal 2 liter sehari.</li>" +
+                          "</ul>" +
+                          "<strong>🏋️ Rekomendasi Olahraga:</strong>" +
+                          "<ul>" +
+                          "<li>Kombinasikan olahraga kardio (jogging, bersepeda, berenang) dengan latihan beban ringan.</li>" +
+                          "<li>Lakukan secara rutin 3-5 kali seminggu selama 30-45 menit.</li>" +
+                          "</ul>" +
+                          "</div>";
         } else if (imt > 25.0 && imt <= 27.0) {
             status = "Kelebihan Berat Badan (Tingkat Ringan)";
             warna = "#ff9800";
+            rekomendasi = "<div style='text-align: left; margin-top: 15px; font-weight: normal; color: #333; font-size: 15px;'>" +
+                          "<strong>🥗 Rekomendasi Makanan:</strong>" +
+                          "<ul>" +
+                          "<li>Kurangi makanan manis, gorengan, dan karbohidrat olahan (junk food, tepung-tepungan).</li>" +
+                          "<li>Perbanyak porsi sayur berlipat ganda dan ganti camilan dengan buah segar.</li>" +
+                          "</ul>" +
+                          "<strong>🏋️ Rekomendasi Olahraga:</strong>" +
+                          "<ul>" +
+                          "<li>Tingkatkan latihan kardio seperti jalan cepat, aerobik, atau bersepeda untuk membakar kalori.</li>" +
+                          "<li>Mulai rutin melakukan squat atau plank untuk mengencangkan otot tubuh.</li>" +
+                          "</ul>" +
+                          "</div>";
         } else {
             status = "Obesitas (Gizi Lebih)";
             warna = "#f44336";
+            rekomendasi = "<div style='text-align: left; margin-top: 15px; font-weight: normal; color: #333; font-size: 15px;'>" +
+                          "<strong>🥗 Rekomendasi Makanan:</strong>" +
+                          "<ul>" +
+                          "<li>Terapkan defisit kalori yang sehat (kontrol porsi makan dengan ketat).</li>" +
+                          "<li>Hindari minuman kemasan berpemanis tinggi dan kurangi penggunaan garam berlebih.</li>" +
+                          "</ul>" +
+                          "<strong>🏋️ Rekomendasi Olahraga:</strong>" +
+                          "<ul>" +
+                          "<li>Pilih olahraga low-impact yang aman untuk sendi: jalan kaki santai, berenang, atau bersepeda statis.</li>" +
+                          "<li>Mulai dari durasi ringan (15-20 menit) lalu tingkatkan secara bertahap seiring kebugaran membaik.</li>" +
+                          "</ul>" +
+                          "</div>";
         }
 
-        hasilDiv.style.color = warna;
-        hasilDiv.innerHTML = "Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status;
+        hasilDiv.innerHTML = "<span style='color: " + warna + ";'>Nilai IMT: " + imt.toFixed(1) + "<br>Status: " + status + "</span>" + rekomendasi;
     }
     </script>
 
