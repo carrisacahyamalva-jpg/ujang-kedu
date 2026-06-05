@@ -37,8 +37,8 @@ h1 {
     font-family: "Chango", sans-serif;
     font-size: 80px;           
     font-weight: bold;
-    color: #ca467c;
-    background-color:#FFD8D3;
+    color: #765753;
+    background-color:#ffe8e5;
     padding: 40px 80px;        
     border-radius: 20px;        
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);      
@@ -51,9 +51,9 @@ h2 {
     font-size: 30px;
     width: 100%;
     margin: 0;
-    background-color: #ca467c;
+    background-color: #ffd9d4;
     padding: 40px 0 5px 0;
-    color: white;
+    color: #86a190;
 }
 
 h3 {
@@ -61,10 +61,10 @@ h3 {
     font-family: "Redressed", Courier, monospace;
     font-size: 25px;
     line-height: 1.6;
-    color: #6f0800; 
+    color: #5e7969; 
     width: 100%;
     margin: 0;
-    background-color: #ca467c;
+    background-color: #ffd9d4;
     padding: 20px 0 50px 0;
 }
 
@@ -81,10 +81,11 @@ p {
     width: 100%;
     margin: 0;
     background-color: #ca467c;
-    color: black;
+    color: #545454;
     padding: 0 50px 40px 50px;
     font-weight: bold;
     box-sizing: border-box;
+
 }
 
 img {
