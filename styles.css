@@ -288,45 +288,46 @@ li a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px; 
-    padding: 80px 10%; 
+    padding: 50px 10%; 
     background-color: transparent;
 }
 
 .cc1 {
-    border: none; 
-    border-top: 1px solid #eaeaea; 
-    padding: 30px 0; 
-    background-color: transparent; 
-    box-shadow: none; 
-    transition: all 0.4s ease;
+    background-color: #f5f5dc; 
+    padding: 35px;
+    border-radius: 20px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .cc1 h4 {
     text-align: left;
     font-size: 28px;
     font-weight: 600;
+    margin-top: 0;
     margin-bottom: 15px;
-    color: #1a1a1a;
+    color: #765753;
 }
 
 .label {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #888;
+    color: #ca467c;
     display: block;
     margin-bottom: 15px;
 }
 
 .cc1:hover {
-    transform: translateX(10px); 
-    border-top: 1px solid #000; 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); 
 }
 
 .cc1 p2 {
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color: #545454;
     padding: 0; 
     text-align: justify;
     display: block;
@@ -335,6 +336,7 @@ li a:hover {
 @media (max-width: 768px) {
     .cc {
         grid-template-columns: 1fr;
+        padding: 30px 5%;
     }
     li {
         padding: 0 20px; 
