@@ -353,7 +353,7 @@ li a:hover {
         font-size: 13px !important;
     }
 }
-   /* ==================== TIMELINE ZIG-ZAG DESIGN ==================== */
+ /* ==================== TIMELINE ZIG-ZAG DESIGN ==================== */
 .timeline-container {
     width: 100%;
     max-width: 1100px;
@@ -370,7 +370,6 @@ li a:hover {
     width: 100%;
 }
 
-/* Membalik posisi kolom secara otomatis pada urutan genap (Progress 2) */
 .progress-item:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -395,23 +394,24 @@ li a:hover {
     text-align: left !important;
     background-color: transparent !important;
     color: #ca467c !important;
-    font-size: 32px !important;
-    font-family: "Chango", sans-serif !important;
-    padding: 15px 0 10px 0 !important;
+    font-size: 28px !important;
+    font-family: "Chango", sans-serif !important; /* Memakai font Chango biar lucu */
+    padding: 15px 0 15px 0 !important;
     margin: 0 !important;
 }
 
 .progress-artikel p3 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace; /* Memakai font mesin tik konsisten */
     font-size: 16px;
     line-height: 1.7;
     color: #1a1a1a;
     text-align: justify;
     display: block;
-    background-color: rgba(245, 245, 220, 0.8);
+    background-color: rgba(245, 245, 220, 0.85); /* Boks krem transparan */
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    font-weight: bold;
 }
 
 .progress-dokumentasi {
@@ -433,7 +433,6 @@ li a:hover {
     transform: scale(1.03);
 }
 
-/* Penyesuaian Responsif Layar HP */
 @media (max-width: 858px) {
     .progress-item, .progress-item:nth-child(even) {
         flex-direction: column !important;
@@ -441,7 +440,8 @@ li a:hover {
         margin-bottom: 60px;
     }
     .progress-artikel h3 {
-        font-size: 24px !important;
+        font-size: 20px !important;
+        text-align: center !important;
     }
     .progress-artikel p3 {
         font-size: 14px;
