@@ -21,11 +21,16 @@ html, body {
 
 body {
     background-image: url('background web.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
     font-family: 'Jumping Chick', Arial, sans-serif;
+
 }
 
 h1 {
