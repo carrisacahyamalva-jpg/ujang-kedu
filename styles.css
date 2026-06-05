@@ -353,3 +353,98 @@ li a:hover {
         font-size: 13px !important;
     }
 }
+   /* ==================== TIMELINE ZIG-ZAG DESIGN ==================== */
+.timeline-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+/* Membalik posisi kolom secara otomatis pada urutan genap (Progress 2) */
+.progress-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.progress-artikel {
+    flex: 1;
+    text-align: left;
+}
+
+.progress-badge {
+    background-color: #f5f5dc;
+    color: #ca467c;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.progress-artikel h3 {
+    text-align: left !important;
+    background-color: transparent !important;
+    color: #ca467c !important;
+    font-size: 32px !important;
+    font-family: "Chango", sans-serif !important;
+    padding: 15px 0 10px 0 !important;
+    margin: 0 !important;
+}
+
+.progress-artikel p3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    text-align: justify;
+    display: block;
+    background-color: rgba(245, 245, 220, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.progress-dokumentasi {
+    flex: 1;
+}
+
+.progress-dokumentasi img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    border: 5px solid #f5f5dc;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.progress-dokumentasi img:hover {
+    transform: scale(1.03);
+}
+
+/* Penyesuaian Responsif Layar HP */
+@media (max-width: 858px) {
+    .progress-item, .progress-item:nth-child(even) {
+        flex-direction: column !important;
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+    .progress-artikel h3 {
+        font-size: 24px !important;
+    }
+    .progress-artikel p3 {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
