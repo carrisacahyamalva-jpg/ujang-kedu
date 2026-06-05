@@ -1,28 +1,61 @@
- <title>Blank template</title>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoWeby - Design Progress</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Redressed&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="styles.css">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="design.html">DESIGN</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+    </ul>
 
-    </head>
-    <body>
+    <h1 style="font-size: 50px; padding: 25px 50px;">Project Progress</h1>
 
-        <h1>Say hi to Carrisa's Space</h1>
-        <ul>
-            <li><a href= "home.html">HOME</a></li>
-            <li><a href= "design.html">DESIGN</a></li>
-            <li><a href= "product.html">PRODUCT</a></li>
-        </ul>
-        <p>Hello, saya aka menampilkan sebuah lirik lagu yang berjudul Linger by The Cranberries
-            <p>
-            <br>aufa ganteng banget asoy
-            
-                        
-        
+    <div class="timeline-container">
 
-             
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
-        
-    </body>
+        <div class="progress-item">
+            <div class="progress-artikel">
+                <span class="progress-badge">Progress 01</span>
+                <h3>Riset Rumus & Analisis Gizi</h3>
+                <p3>Tahap awal proyek dimulai dengan melakukan riset mendalam mengenai metode perhitungan Indeks Massa Tubuh (IMT) yang standar dan valid. Kami mengumpulkan data referensi dari ringkasan medis untuk menentukan ambang batas nilai gizi, mulai dari kategori kurang, ideal, kelebihan berat badan, hingga obesitas. Tidak hanya angka standar, pada tahap ini kami juga merumuskan pola rekomendasi makanan yang efisien serta mengelompokkan jenis olahraga berdasarkan target intensitas yang diinginkan oleh pengguna agar sistem kalkulator dapat bekerja secara interaktif dan memberikan solusi yang personal.</p3>
+            </div>
+            <div class="progress-dokumentasi">
+                <img src="progress1.png" alt="Dokumentasi Riset">
+            </div>
+        </div>
 
+        <div class="progress-item">
+            <div class="progress-artikel">
+                <span class="progress-badge">Progress 02</span>
+                <h3>Web Programming & Logika Kode</h3>
+                <p3>Setelah data dan rumus siap, pengerjaan beralih ke tahap penulisan kode program menggunakan HTML dan JavaScript. Fokus utama pada fase ini adalah membangun struktur form input boks kalkulator dan menyusun fungsi logika percabangan kondisional di JavaScript. Tantangan terbesar adalah bagaimana membuat transisi data dari layar input boks agar bisa terlempar dengan mulus ke dalam slide lembar hasil analisis tanpa merusak variabel yang ada. Kami memastikan kalkulator dapat memproses data tinggi dan berat badan secara instan tanpa perlu memuat ulang halaman.</p3>
+            </div>
+            <div class="progress-dokumentasi">
+                <img src="progress2.png" alt="Dokumentasi Coding">
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <div class="progress-artikel">
+                <span class="progress-badge">Progress 03</span>
+                <h3>Decoration & Optimasi Tampilan</h3>
+                <p3>Tahap akhir difokuskan pada dekorasi visual menggunakan CSS untuk memastikan antarmuka website terlihat menarik, modern, dan konsisten dengan tema utama GoWeby. Kami melakukan kustomisasi pada boks kalkulator, memberikan efek bayangan yang halus, serta merancang tombol-tombol opsi olahraga berukuran raksasa dengan warna kontras yang dinamis. Selain aspek estetika warna dan font, dilakukan juga optimasi responsivitas media queries agar seluruh elemen visual, teks artikel, maupun layout zig-zag ini tetap presisi dan rapi saat diakses melalui perangkat HP.</p3>
+            </div>
+            <div class="progress-dokumentasi">
+                <img src="progress3.png" alt="Dokumentasi Finishing">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
 </html>
