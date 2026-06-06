@@ -74,7 +74,7 @@ h4 {
     line-height: 1.6;
 }
 
-p {
+p1 {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
@@ -86,6 +86,21 @@ p {
     font-weight: bold;
     box-sizing: border-box;
 }
+
+p2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    width: 100%;
+    margin: 0;
+    background-color: #fabec0;
+    color: #545454;
+    padding: 0 50px 40px 50px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+
 p3 {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
