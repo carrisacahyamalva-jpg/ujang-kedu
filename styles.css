@@ -38,7 +38,7 @@ h1 {
     font-size: 80px;           
     font-weight: bold;
     color: #765753;
-    background-colore:#fabec0;
+    background-color: #fabec0; /* Memperbaiki typo 'background-colore' */
     padding: 40px 80px;        
     border-radius: 20px;        
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);      
@@ -75,6 +75,7 @@ h4 {
 }
 
 p1 {
+    display: block;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
@@ -88,6 +89,7 @@ p1 {
 }
 
 p2 {
+    display: block;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
@@ -100,8 +102,8 @@ p2 {
     box-sizing: border-box;
 }
 
-
 p3 {
+    display: block;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
@@ -428,6 +430,7 @@ li a:hover {
     margin: 0 !important;
 }
 
+/* Mengubah background artikel timeline menjadi ffd9d4 */
 .progress-artikel p3 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
@@ -435,7 +438,7 @@ li a:hover {
     color: #1a1a1a;
     text-align: justify;
     display: block;
-    background-color: rgba(245, 245, 220, 0.85);
+    background-color: #ffd9d4; /* Mengubah dari krem transparan menjadi ffd9d4 sesuai request */
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.05);
