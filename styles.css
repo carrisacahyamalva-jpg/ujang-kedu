@@ -116,13 +116,13 @@ p3 {
     display: block;
 } 
 
-.deskripsi {
+.dk {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     width: 100%;
     margin: 0;
-    background-color: transparen;
+    background-color: fabec0;
     color: #545454;
     padding: 20px 50px 40px 50px;
     font-weight: bold;
